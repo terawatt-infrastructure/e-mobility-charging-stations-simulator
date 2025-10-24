@@ -56,6 +56,7 @@ export abstract class AbstractUIService {
     [ProcedureName.METER_VALUES, BroadcastChannelProcedureName.METER_VALUES],
     [ProcedureName.OPEN_CONNECTION, BroadcastChannelProcedureName.OPEN_CONNECTION],
     [ProcedureName.SET_SUPERVISION_URL, BroadcastChannelProcedureName.SET_SUPERVISION_URL],
+    [ProcedureName.SET_CHARGING_STATION_ID, BroadcastChannelProcedureName.SET_SUPERVISION_URL],
     [
       ProcedureName.START_AUTOMATIC_TRANSACTION_GENERATOR,
       BroadcastChannelProcedureName.START_AUTOMATIC_TRANSACTION_GENERATOR,
