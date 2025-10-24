@@ -807,19 +807,11 @@ export class ChargingStation extends EventEmitter {
   }
 
   public setChargingStationId (url: string): void {
-    if (
-      this.stationInfo?.supervisionUrlOcppConfiguration === true &&
-      isNotEmptyString(this.stationInfo.supervisionUrlOcppKey)
-    ) {
-      setConfigurationKeyValue(this, this.stationInfo.supervisionUrlOcppKey, url)
-    } else {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      this.stationInfo!.supervisionUrls = url
-      this.configuredSupervisionUrl = this.getConfiguredSupervisionUrl()
-      this.saveStationInfo()
-    }
+    console.log('SETTTTTTTTTTTTTTTTING')
+    this.chargingStationId = url
+    this.saveStationInfo()
   }
-  
+
   public start (): void {
     if (!this.started) {
       if (!this.starting) {

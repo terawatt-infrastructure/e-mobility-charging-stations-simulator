@@ -12,6 +12,7 @@ export enum BroadcastChannelProcedureName {
   METER_VALUES = 'meterValues',
   OPEN_CONNECTION = 'openConnection',
   SET_SUPERVISION_URL = 'setSupervisionUrl',
+  SET_CHARGING_STATION_ID = 'setChargingStationId',
   START_AUTOMATIC_TRANSACTION_GENERATOR = 'startAutomaticTransactionGenerator',
   START_CHARGING_STATION = 'startChargingStation',
   START_TRANSACTION = 'startTransaction',
