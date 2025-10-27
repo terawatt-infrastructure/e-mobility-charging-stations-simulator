@@ -808,7 +808,6 @@ export class ChargingStation extends EventEmitter {
   }
 
   public setChargingStationId (url: string): void {
-    console.log('SETTING TO: ' + url)
     this.stationInfo.chargingStationId = url
     this.saveStationInfo()
   }

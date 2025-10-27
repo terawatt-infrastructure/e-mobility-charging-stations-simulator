@@ -14,7 +14,6 @@ export const getUsernameAndPasswordFromAuthorizationToken = (
     next(new BaseError('Invalid basic authentication token format'))
   }
   const authentication = Buffer.from(authorizationToken, 'base64').toString()
-  console.log('authentication: ' + authentication)
   const authenticationParts = authentication.split(/:/)
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return [authenticationParts.shift()!, authenticationParts.join(':')]
@@ -30,7 +29,6 @@ export const handleProtocols = (
     return false
   }
   for (const fullProtocol of protocols) {
-    console.log('passed protocol is '+fullProtocol)
     if (isProtocolAndVersionSupported(fullProtocol)) {
       return fullProtocol
     }

@@ -92,7 +92,6 @@ export class UIWebSocketServer extends AbstractUIServer {
 
   public start (): void {
     this.webSocketServer.on('connection', (ws: WebSocket, _req: IncomingMessage): void => {
-      console.log("PROTOCOL IS " + ws.protocol)
       if (!isProtocolAndVersionSupported(ws.protocol)) {
         logger.error(
           `${this.logPrefix(
