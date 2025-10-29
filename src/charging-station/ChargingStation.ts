@@ -188,7 +188,6 @@ export class ChargingStation extends EventEmitter {
         ? getConfigurationKey(this, this.stationInfo.supervisionUrlOcppKey)?.value
         : this.configuredSupervisionUrl.href
     }`
-    console.log('connecting with chargingStationId: ' + this.stationInfo?.chargingStationId)
     return new URL(
       `${wsConnectionBaseUrlStr}${
         !wsConnectionBaseUrlStr.endsWith('/') ? '/' : ''
