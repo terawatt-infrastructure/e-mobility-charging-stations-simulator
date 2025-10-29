@@ -27,6 +27,7 @@ export enum ProcedureName {
   OPEN_CONNECTION = 'openConnection',
   PERFORMANCE_STATISTICS = 'performanceStatistics',
   SET_SUPERVISION_URL = 'setSupervisionUrl',
+  SET_CHARGING_STATION_ID = 'setChargingStationId',
   SIMULATOR_STATE = 'simulatorState',
   START_AUTOMATIC_TRANSACTION_GENERATOR = 'startAutomaticTransactionGenerator',
   START_CHARGING_STATION = 'startChargingStation',

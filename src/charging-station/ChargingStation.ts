@@ -808,6 +808,11 @@ export class ChargingStation extends EventEmitter {
     }
   }
 
+  public setChargingStationId (url: string): void {
+    this.stationInfo.chargingStationId = url
+    this.saveStationInfo()
+  }
+
   public start (): void {
     if (!this.started) {
       if (!this.starting) {

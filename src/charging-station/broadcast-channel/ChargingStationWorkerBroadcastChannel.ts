@@ -212,6 +212,12 @@ export class ChargingStationWorkerBroadcastChannel extends WorkerBroadcastChanne
         },
       ],
       [
+        BroadcastChannelProcedureName.SET_CHARGING_STATION_ID,
+        (requestPayload?: BroadcastChannelRequestPayload) => {
+          this.chargingStation.setChargingStationId(requestPayload?.url as string)
+        },
+      ],
+      [
         BroadcastChannelProcedureName.START_AUTOMATIC_TRANSACTION_GENERATOR,
         (requestPayload?: BroadcastChannelRequestPayload) => {
           this.chargingStation.startAutomaticTransactionGenerator(requestPayload?.connectorIds)
