@@ -13,7 +13,9 @@ export class MongoDBStorage extends Storage {
 
   constructor (storageUri: string, logPrefix: string) {
     super(storageUri, logPrefix)
-    this.client = new MongoClient(this.storageUri.toString())
+    this.client = new MongoClient(this.storageUri.toString(), {
+      appName: 'e-mobility-charging-stations-simulator',
+    })
     this.connected = false
     this.dbName = this.storageUri.pathname.replace(/(?:^\/)|(?:\/$)/g, '')
   }
